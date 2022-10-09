@@ -52,10 +52,9 @@ public class PoseCreatorWindow : EditorWindow
     }
 
     //loads relative to the hand's attach transform
-    //make sure your grabbed object attach transform and hand attach transform are the same in world space.
     void LoadTransform(Pose pose, Transform transform)
     {
-        transform.SetPositionAndRotation(m_attachTransform.TransformPoint(pose.position), m_attachTransform.rotation * pose.rotation);
+        transform.SetPositionAndRotation(m_grabAttachTransform.TransformPoint(pose.position), m_grabAttachTransform.rotation * pose.rotation);
     }
 
     void LoadPose(HandPose pose)

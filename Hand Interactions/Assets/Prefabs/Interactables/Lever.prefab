@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &12757738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 12757739}
-  m_Layer: 0
-  m_Name: Attach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &12757739
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12757738}
-  m_LocalRotation: {x: 0.104672104, y: -0.6961962, z: -0.6885284, w: 0.17402124}
-  m_LocalPosition: {x: 0.027092285, y: -0.02134411, z: 0.0034945142}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 6746882461957667607}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1865594288933250700
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,41 +194,16 @@ MonoBehaviour:
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
   m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
     m_PersistentCalls:
       m_Calls: []
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
   m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnLastHoverExited:
     m_PersistentCalls:
       m_Calls: []
   m_OnSelectEntered:
@@ -276,6 +221,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
+  m_CustomReticle: {fileID: 0}
   startDragPosition: {fileID: 4302068329806884443}
   endDragPosition: {fileID: 2774159846490711125}
   dragPercent: 0
@@ -336,10 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d960477f005db234bab5c2038837f9fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideHand: 0
-  leftHandPose: {fileID: 11400000, guid: ab51b54611ef5ec4ba5d53bbeafffe2d, type: 2}
-  rightHandPose: {fileID: 0}
-  fixedAttachment: {fileID: 12757739}
+  hideHand: 1
 --- !u!1 &5191810779357538782
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7597d7aaa90fe4ebc7382b3ef9f48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeMaterial: {fileID: 2100000, guid: b711905ea47884f41bbaa10bd8aaa1a6, type: 2}
   startOrientation: {fileID: 2760207767665078694}
   endOrientation: {fileID: 8125446971459587261}
 --- !u!1 &6954143174638426193
@@ -481,8 +423,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.0053788526, w: 0.9999856}
   m_LocalPosition: {x: 0.00020974924, y: 0.08550305, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 12757739}
+  m_Children: []
   m_Father: {fileID: 6349022162209785812}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.61600006}

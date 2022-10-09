@@ -38,12 +38,10 @@ public class Hand : MonoBehaviour
     public bool isCollisionEnabled { get; private set; } = true;
 
     public XRBaseInteractor interactor = null;
-    
 
     public Transform grabAttachment = null;
     public GameObject handVisual = null;
 
-    Transform m_currentGrabbedAttach = null;
     HandPose m_currentPose = null;
     Transform m_currentPoseHandAttach = null;
     Vector3 m_restorePosition = Vector3.zero;
@@ -164,15 +162,6 @@ public class Hand : MonoBehaviour
     void OnGrab(XRBaseInteractable grabbedObject)
     {
         HandControl ctrl = grabbedObject.GetComponent<HandControl>();
-        if (ctrl.fixedAttachment == null)
-        {
-            m_currentGrabbedAttach = grabbedObject.GetComponent<XRGrabInteractable>().attachTransform;
-        }
-        else
-        {
-            m_currentGrabbedAttach = ctrl.fixedAttachment.transform;
-        }
-       
         if(ctrl != null)
         {
             if(ctrl.hideHand)
@@ -199,16 +188,18 @@ public class Hand : MonoBehaviour
 
     void SyncTransform(Pose pose, Transform finger)
     {
-        //Code here is different from videos. Disregard video for this part.
-        finger.SetPositionAndRotation(m_currentGrabbedAttach.TransformPoint(pose.position),m_currentGrabbedAttach.rotation * pose.rotation);
+        Vector3 position = grabAttachment.transform.TransformPoint(pose.position);
+        Quaternion rotation = grabAttachment.transform.rotation * pose.rotation;
+        finger.transform.SetPositionAndRotation(position, rotation);
     }
 
     void SyncRigToPose()
     {
-        //Code here is slightly different from the videos to avoid early returns when loading a pose without an active XR rig present.
-        var selected = interactor?.selectTarget;
+        if(interactor == null) return;
 
-        if (grabAttachment == null || m_currentPose == null) return;
+        var selected = interactor.selectTarget;
+
+        if (grabAttachment == null || m_currentPose == null || selected == null) return;
 
         if(m_currentPoseHandAttach != null)
             HandControl.AlignHandToAttachment(handVisual.transform, grabAttachment, m_currentPoseHandAttach);
@@ -239,7 +230,6 @@ public class Hand : MonoBehaviour
     void OnRelease(XRBaseInteractable releasedObject)
     {
         HandControl ctrl = releasedObject.GetComponent<HandControl>();
-        m_currentGrabbedAttach = null;
         if(ctrl != null)
         {
             if(m_currentPose != null)

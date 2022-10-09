@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &921191855
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 921191856}
-  m_Layer: 0
-  m_Name: Attach
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &921191856
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921191855}
-  m_LocalRotation: {x: -0.578184, y: -0.30187017, z: -0.3508204, w: 0.6719396}
-  m_LocalPosition: {x: 0.022364974, y: -0.031712808, z: -0.012226661}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3555553083009061257}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2279954425069909392
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,8 +31,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 921191856}
+  m_Children: []
   m_Father: {fileID: 1867960270154698094}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -294,6 +263,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hideHand: 1
-  leftHandPose: {fileID: 11400000, guid: 3fcc6533ab6a49646865791ae810a0ed, type: 2}
-  rightHandPose: {fileID: 0}
-  fixedAttachment: {fileID: 921191856}
