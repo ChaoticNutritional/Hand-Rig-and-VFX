@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487fd41142fbdaa47a8af89b3b03f50a, type: 3}
+  m_Name: WandGrab - Right
+  m_EditorClassIdentifier: 
+  thumb:
+    position: {x: -0.016999999, y: 0.014500005, z: 0.021399997}
+    rotation: {x: 0.5643606, y: -0.6380533, z: -0.23112726, w: 0.4700696}
+  index:
+    position: {x: 0.023500005, y: 0.010299999, z: 0.0953}
+    rotation: {x: -0.0039431453, y: -0.8323835, z: -0.4082697, w: 0.37475085}
+  middle:
+    position: {x: 0.014000001, y: -0.0158, z: 0.0762}
+    rotation: {x: 0.25619748, y: -0.57480454, z: -0.7236068, w: -0.2834711}
+  ring:
+    position: {x: 0.013869998, y: -0.022730008, z: 0.03921}
+    rotation: {x: 0.42023817, y: -0.36571988, z: -0.44584888, w: -0.70061964}
+  pinky:
+    position: {x: 0.014499999, y: -0.042200007, z: 0.036799997}
+    rotation: {x: 0.29081404, y: -0.4176396, z: -0.44364968, w: -0.7376853}
